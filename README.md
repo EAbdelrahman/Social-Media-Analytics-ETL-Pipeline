@@ -56,11 +56,15 @@ Social-Media-Analytics-ETL-Pipeline/
 │   └── processed/
 │       └── social_data.csv    # Processed data ready for loading
 ├── spark_code/
-│   ├── scripts/
-│   │   └── etl_script.py      # PySpark ETL script
-│   └── notebooks/
-│       └── ETL_notebook.ipynb # Jupyter notebook for ETL processes
-├── docker-compose.yaml/
-│___ Dockerfile             # Dockerfile for setting up the environment
+|   |___ PySpark Scripts.pdf   # Here you will find illustrations for any script written
+|   |____ Write_csv.py
+│   ├____ Cleaning.py
+│   │____ Logging.py      
+│   |____ Connect_Dwh.py
+│       
+├── docker-compose.yaml
+│___ Dockerfile               # Dockerfile for setting up the environment
+|___ init.sh
+|___ installed-packages.txt             
 └── README.md                  # Documentation of the project
-|── ETL Pipeline User Manual.pdf
+|── ETL Pipeline User Manual.pdf  # User Manual for the  project Here you will find any information you need.
