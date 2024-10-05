@@ -1,0 +1,4 @@
+*.json filter=lfs diff=lfs merge=lfs -text
+datasets/git[[:space:]]lfs[[:space:]]track[[:space:]]*.json.json filter=lfs diff=lfs merge=lfs -text
+social_media_info.json filter=lfs diff=lfs merge=lfs -text
+datasets/social_media_info.json filter=lfs diff=lfs merge=lfs -text
