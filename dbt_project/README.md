@@ -46,5 +46,3 @@ We adhere to the following standards to maintain and scale our dbt implementatio
 - **Materialization:** Models are primarily materialized as tables to optimize query performance.
 - **Testing:** Extensive data testing ensures the accuracy and integrity of our transformations.
 
-## Conclusion
-The dbt models are central to our data architecture, enabling efficient and scalable solutions for our business intelligence and analytics needs. This documentation aids in maintaining and enhancing our data infrastructure.
