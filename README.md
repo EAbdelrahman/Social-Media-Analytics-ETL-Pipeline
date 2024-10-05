@@ -61,9 +61,11 @@ Social-Media-Analytics-ETL-Pipeline/
 │   │   │   ├── content_performance.sql  # Transformation for content performance mart
 │   │   │   ├── location_analysis.sql    # Transformation for location analysis mart
 │   │   │   ├── tag_analysis.sql         # Transformation for tag analysis mart
-│   │   │   └── user_engagement.sql      # Transformation for user engagement mart
+│   │   │   ├── user_engagement.sql      # Transformation for user engagement mart
+|   |   |   ├── shema.yml                # Defines and documents  models, columns, and tests for structured metadata management.
+|   |   |   ├── source.yml               # Specifies external data sources and configurations for models, including data freshness.
 │   │   └── staging/
-│   ├── dbt_project.yml        # Configuration file for dbt project
+│   ├── dbt_project.yml        # Configuration file for dbt_project
 |   |___ dbt.pdf               # Full schema and purpose of the data marts
 |   |___ README.md             # Documentation for Dbt
 │
@@ -84,7 +86,7 @@ Social-Media-Analytics-ETL-Pipeline/
 │       
 ├── docker-compose.yaml
 │___ Dockerfile               # Dockerfile for setting up the environment
-|___ init.sh                  # using to initiate the enviroment 
+|___ init.sh                  # using to initiate the environment 
 |___ installed-packages.txt             
 └── README.md                  # Documentation of the project
 |── ETL Pipeline User Manual.pdf  # User Manual for the  project Here you will find any information you need.
