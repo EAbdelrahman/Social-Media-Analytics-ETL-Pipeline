@@ -59,14 +59,14 @@ Social-Media-Analytics-ETL-Pipeline/
 │       
 ├── spark_code/
 |   |___ PySpark Scripts.pdf   # Here you will find illustrations for PySpark scripts
-|   |____ Write_csv.py
-│   ├____ Cleaning.py
-│   │____ Logging.py      
-│   |____ Connect_Dwh.py
+|   |____ Write_csv.py/ipynb
+│   ├____ Cleaning.py/ipynb
+│   │____ Logging.py/ipynb     
+│   |____ Connect_Dwh.py/ipynb
 │       
 ├── docker-compose.yaml
 │___ Dockerfile               # Dockerfile for setting up the environment
-|___ init.sh
+|___ init.sh                  # For start the enviroment 
 |___ installed-packages.txt             
 └── README.md                  # Documentation of the project
 |── ETL Pipeline User Manual.pdf  # User Manual for the  project Here you will find any information you need.
