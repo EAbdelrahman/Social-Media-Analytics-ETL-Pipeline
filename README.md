@@ -23,3 +23,44 @@ The pipeline caters to the following needs:
 ## Contact Information
 - **Name:** Abdelrahman Mahmoud Abdelaal
 - **Email:** [a.Mahmoud1803@gmail.com](mailto:a.Mahmoud1803@gmail.com)
+
+# Project File Structure
+
+This section describes the hierarchical organization of project files, making it easier to navigate and understand the project components.
+
+## Directory Layout
+
+```plaintext
+Social-Media-Analytics-ETL-Pipeline/
+├── dags/
+│   ├──  ETL_Pipeline.py     # DAG definition for ETL processes
+│   │__  Airflow DAG.PDF        
+│   
+│       
+├── dbt_project/
+│   ├── models/
+│   │   ├── marts/
+│   │   │   ├── content_performance.sql  # Transformation for content performance mart
+│   │   │   ├── location_analysis.sql    # Transformation for location analysis mart
+│   │   │   ├── tag_analysis.sql         # Transformation for tag analysis mart
+│   │   │   └── user_engagement.sql      # Transformation for user engagement mart
+│   │   └── staging/
+│   ├── dbt_project.yml        # Configuration file for dbt project
+│
+|── dbt_profiles
+|    |_____  profiles.yml       # dbt profile configuration
+|
+├── datasets/
+│   ├── raw/
+│   │   └── social_data.json   # Raw social media data
+│   └── processed/
+│       └── social_data.csv    # Processed data ready for loading
+├── spark_code/
+│   ├── scripts/
+│   │   └── etl_script.py      # PySpark ETL script
+│   └── notebooks/
+│       └── ETL_notebook.ipynb # Jupyter notebook for ETL processes
+├── docker-compose.yaml/
+│___ Dockerfile             # Dockerfile for setting up the environment
+└── README.md                  # Documentation of the project
+|── ETL Pipeline User Manual.pdf
