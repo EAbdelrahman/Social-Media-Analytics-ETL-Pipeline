@@ -34,7 +34,7 @@ This section describes the hierarchical organization of project files, making it
 Social-Media-Analytics-ETL-Pipeline/
 ├── dags/
 │   ├──  ETL_Pipeline.py     # DAG definition for ETL processes
-│   │__  Airflow DAG.PDF        
+│   │__  Airflow DAG.PDF     # Documentation of the dag    
 │   
 │       
 ├── dbt_project/
@@ -66,7 +66,7 @@ Social-Media-Analytics-ETL-Pipeline/
 │       
 ├── docker-compose.yaml
 │___ Dockerfile               # Dockerfile for setting up the environment
-|___ init.sh                  # For start the enviroment 
+|___ init.sh                  # using to initiate the enviroment 
 |___ installed-packages.txt             
 └── README.md                  # Documentation of the project
 |── ETL Pipeline User Manual.pdf  # User Manual for the  project Here you will find any information you need.
