@@ -1,59 +1,16 @@
-
 # Overview
-
-Environment for performing the task for the position data engineer at Orange Egypt.
-
-## Pre-requisites
-
-1. [Docker](https://www.docker.com/get-started/)
-
-2. [Git bash](https://gitforwindows.org/) or any unix based terminal
-
-### Overview of the environment
-
-Docker Environment includes the following, specified in the compose file
-
-1. Airflow (UI on Port 8088), username: `airflow`, password: `airflow`
-
-2. PySpark (Notebook on Port 8888, UI for jobs 4040), container named: `pyspark`
-	any code you create should be under the dir spark_code on your host machine, which is already created for you.
-	driver directory has postgres driver allowing spark to connect to postgres.
-	
-	Tip: check the mounted volumes in the compose file for pyspark.
-
-3. DBT. Container with dbt installed and the connector to postgres. container_name: `dbt`
-	Make sure to initalise and create any dbt related code under dbt_project dir on host or `/app` in the container.
-	
-	Tip: check the mounted volumes in the compose file for dbt.
-
-4. Postgres - Your data warehouse container. Separate from the postgres container for airflow. container_name: `postgres_warehouse`
-	Check the compose file for the credentials and database name.
-
-### How to run
-  
-
-Open the terminal and move to the directory.
-
-1. `chmod u+x ./init.sh`
-
-2. Pull and run the environment - `./init.sh`, total size of the environment is 5~6 gb, so first time running this command you will need internet connection.
-
-3. To access notebook and use PySpark, run this command in the terminal `docker logs --tail 20 pyspark`, look for a line that looks something like this -
-
-```
-
-To access the server, open this file in a browser:
-
-        file:///home/jovyan/.local/share/jupyter/runtime/jpserver-7-open.html
-
-    Or copy and paste one of these URLs:
-
-        http://7a3899fb9869:8888/lab?token=a745a8cde0eafd1b6125e8395d1d02d0c836e677cd6c417a
-
-        http://127.0.0.1:8888/lab?token=a745a8cde0eafd1b6125e8395d1d02d0c836e677cd6c417a
-
-```
-
-Copy and paste the link with 127.0.0.1:8888?token=...
-
-4. To close the environment , make sure you are in the terminal and under the same directory then execute this command - `docker compose down`
+This ETL pipeline is designed to automate the process of extracting, transforming, and loading (ETL) social media analytics data into a PostgreSQL data warehouse. It enables efficient analysis and reporting by organizing raw data from various sources into well-structured data marts, following the principles of a star schema. The pipeline leverages PySpark for large-scale data processing, Apache Airflow for orchestrating ETL workflows, and dbt for managing transformations in the data warehouse.
+## The purpose of this pipeline is to:
+•	Extract raw social media interaction data from JSON files.
+•	Transform the data into dimensions and fact tables that provide insights into user engagement, content performance, tag analysis, and location analysis.
+•	Load the cleaned and transformed data into a PostgreSQL data warehouse to power analytics dashboards and reports.
+## Scope of the Pipeline
+This pipeline addresses the data processing needs for the social media analytics platform by automating the entire ETL process. The pipeline supports:
+•	Handling and transforming high-volume social media data.
+•	Creating data marts to analyze user activity, content trends, geographical distribution, and tag usage.
+•	Facilitating downstream analysis for business intelligence applications.
+Key components and technologies:
+•	PySpark: Used for the heavy lifting of data extraction and transformation.
+•	Apache Airflow: Orchestrates the entire ETL workflow by managing task dependencies and scheduling.
+•	dbt (Data Build Tool): Executes SQL transformations and manages the schema within the PostgreSQL data warehouse.
+•	PostgreSQL: Serves as the data warehouse where transformed data is stored and queried for reporting.
