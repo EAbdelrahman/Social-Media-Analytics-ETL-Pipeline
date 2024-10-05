@@ -1,0 +1,84 @@
+version: 2
+
+models:
+  - name: dim_users
+    description: "Dimension table for users, containing user details and surrogate keys."
+    columns:
+      - name: user_sk
+        description: "Surrogate key for each user."
+        tests:
+          - not_null
+          - unique
+      - name: user_id
+        description: "Unique identifier for each user."
+        tests:
+          - not_null
+          - unique
+      - name: username
+        description: "The username of the user."
+        tests:
+          - not_null
+      - name: age
+        description: "The age of the user."
+      - name: email
+        description: "Email of the user."
+      - name: gender
+        description: "Gender of the user."
+      - name: name
+        description: "Full name of the user."
+      - name: date_created
+        description: "Date when the user account was created."
+
+  - name: dim_posts
+    description: "Dimension table for posts, containing post details and surrogate keys."
+    columns:
+      - name: post_sk
+        description: "Surrogate key for each post."
+        tests:
+          - not_null
+          - unique
+      - name: post_id
+        description: "Unique identifier for each post."
+        tests:
+          - not_null
+          - unique
+      - name: post_text
+        description: "Content of the post."
+      - name: location
+        description: "Location where the post was created."
+      - name: post_timestamp
+        description: "Timestamp when the post was created."
+      - name: tags
+        description: "Tags associated with the post."
+
+  - name: fact_post_interactions
+    description: "Fact table capturing interactions with posts and users."
+    columns:
+      - name: post_sk
+        description: "Surrogate key referencing the related post."
+        tests:
+          - not_null
+      - name: user_sk
+        description: "Surrogate key referencing the user who interacted with the post."
+        tests:
+          - not_null
+      - name: shares
+        description: "The number of times the post has been shared."
+      - name: angry
+        description: "Number of angry reactions to the post."
+      - name: haha
+        description: "Number of 'haha' reactions to the post."
+      - name: like_count
+        description: "Total number of likes on the post."
+      - name: love
+        description: "Number of 'love' reactions to the post."
+      - name: sad
+        description: "Number of sad reactions to the post."
+      - name: wow
+        description: "Number of 'wow' reactions to the post."
+      - name: comment_user_sk
+        description: "Surrogate key referencing the user who commented on the post, if any."
+      - name: comment_text
+        description: "Content of the comment made on the post."
+      - name: comment_timestamp
+        description: "Timestamp when the comment was made."

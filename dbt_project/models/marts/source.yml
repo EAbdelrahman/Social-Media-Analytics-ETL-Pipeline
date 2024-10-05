@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: social_media_sources   # Source name
+    schema: public               # Schema where the tables reside
+    description: "This source contains all social media-related data."
+    tables:
+      - name: fact_post_interactions
+        description: "Fact table capturing post interactions with users and content. Includes likes, comments, and shares."
+      - name: dim_posts
+        description: "Dimension table for posts. Includes post metadata such as content type, creation date, and author."
+      - name: dim_users
+        description: "Dimension table for users. Includes user information such as user ID, username, and demographic data."

@@ -1,0 +1,15 @@
+postgres_dw:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres_dw  # This is the hostname as defined in your Docker setup
+      user: warehouse    # Your PostgreSQL username
+      password: warehouse  # Your PostgreSQL password
+      dbname: warehouse  # The database name
+      schema: public     # The default schema you want to use
+      port: 5432         # PostgreSQL default port
+      threads: 4         # Number of threads dbt should use
+      keepalives_idle: 0 # Optional: tweak for connections
+
+

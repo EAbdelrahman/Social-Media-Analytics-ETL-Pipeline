@@ -1,0 +1,11 @@
+my_profile:  # This should match the 'profile' in dbt_project.yml
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres_dw   # Replace with your actual PostgreSQL host (from Docker Compose)
+      user: warehouse            # Replace with your actual PostgreSQL username
+      password: warehouse        # Replace with your actual PostgreSQL password
+      port: 5432                 # PostgreSQL default port
+      dbname: warehouse          # Replace with your actual PostgreSQL database name
+      schema: public             # Default schema for dbt models

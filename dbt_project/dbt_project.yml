@@ -1,0 +1,24 @@
+name: 'dbt_project'   # Project name
+version: '1.0'
+
+profile: 'postgres_dw'  # Matches your profile in profiles.yml
+
+model-paths: 
+  - models/marts  # The path where your models are located
+
+target-path: 'target'
+clean-targets: 
+  - target
+  - dbt_modules
+
+models:
+  dbt_project:
+    marts:
+      +materialized: table
+      +schema: 'public' 
+
+flags:
+  debug: false
+  fail_fast: true
+
+query-comment: '{{ dbt_version }} running in {{ target.name }} mode'
