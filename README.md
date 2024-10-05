@@ -46,17 +46,19 @@ Social-Media-Analytics-ETL-Pipeline/
 │   │   │   └── user_engagement.sql      # Transformation for user engagement mart
 │   │   └── staging/
 │   ├── dbt_project.yml        # Configuration file for dbt project
+|   |___ dbt.pdf               # Full schema and purpose of the data marts
+|   |___ README.md             # Documentation for Dbt
 │
 |── dbt_profiles
 |    |_____  profiles.yml       # dbt profile configuration
 |
 ├── datasets/
-│   ├── raw/
-│   │   └── social_data.json   # Raw social media data
-│   └── processed/
-│       └── social_data.csv    # Processed data ready for loading
+│   ├── Data Dictionary.pdf             #Data dictionary and ER diagram
+│   │   
+│   └── social_media_info.json
+│       
 ├── spark_code/
-|   |___ PySpark Scripts.pdf   # Here you will find illustrations for any script written
+|   |___ PySpark Scripts.pdf   # Here you will find illustrations for PySpark scripts
 |   |____ Write_csv.py
 │   ├____ Cleaning.py
 │   │____ Logging.py      
