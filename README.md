@@ -20,6 +20,24 @@ The pipeline caters to the following needs:
 - **dbt (Data Build Tool):** Manages SQL transformations and the schema within the PostgreSQL data warehouse.
 - **PostgreSQL:** Acts as the central repository for storing and querying transformed data.
 
+# System Architecture
+
+Below is the system architecture diagram for the Social Media Analytics ETL Pipeline, illustrating the main components and their interactions.
+
+![System Architecture](images/system_architecture.png)
+
+## Description
+
+- **Data Ingestion**: Data is ingested from various social media platforms using APIs.
+- **Data Processing**: Raw data is processed and transformed using PySpark, preparing it for loading into the data warehouse.
+- **Airflow Scheduler**: Orchestrates the ETL process, ensuring data flows smoothly from ingestion to storage.
+- **dbt**: Handles transformations within the PostgreSQL data warehouse.
+- **Data Storage**: PostgreSQL serves as the data warehouse, where processed data is stored for analytics.
+- **Analytics and Reporting**: Data is accessed using BI tools for reporting and analysis.
+
+This architecture supports efficient data handling and scalable analytics for social media data.
+
+
 ## Contact Information
 - **Name:** Abdelrahman Mahmoud Abdelaal
 - **Email:** [a.Mahmoud1803@gmail.com](mailto:a.Mahmoud1803@gmail.com)
